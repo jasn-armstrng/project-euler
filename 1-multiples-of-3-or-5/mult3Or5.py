@@ -11,5 +11,4 @@ def sumOfMultiples(x, y):
     return sum
 
 if __name__ == "__main__":
-    result = sumOfMultiples(3, 5)
-    print(result)
+    print(sumOfMultiples(3, 5))
