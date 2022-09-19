@@ -10,7 +10,7 @@ def isPrime(x):
     prime=True
 
     if x>1:
-        for i in range(2, floor(sqrt(x)+1)):
+        for i in range(2,floor(sqrt(x)+1)):
             if x%i==0:
                 prime = False
                 break
