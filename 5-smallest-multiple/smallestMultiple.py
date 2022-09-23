@@ -1,26 +1,42 @@
-# Question
-# 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-# What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-from math import floor, sqrt
+# Question:
+# 2520 is the smallest number that can be divided by each of the numbers from 1 to 10
+# without any remainder.
+# What is the smallest positive number that is evenly divisible by all of the numbers
+# from 1 to 20?
 
-primes = []
+# Compute gcd using Euclidean algorithm
+def gcd(x=[]):
+    mod=x[1]
+    while mod>0:
+        gcd=x[1]
+        x=[x[1],x[0]%x[1]]
+        mod=x[1]
+    return gcd
 
-def isPrime(x):
-    # The range is based on the fact that a composite number must have a factor
-    # less than or equal to the square root of that number. Otherwise, the
-    # number is prime.
-    prime=True
+# Compute lcm using lcm(a,b)=(a*b)//gcd(a,b)
+def lcm(x=[1]):
+    # len(x) should have at least 2
 
-    if x>1:
-        for i in range(2,floor(sqrt(x)+1)):
-            if x%i==0:
-                prime = False
-                break
-    return prime
+    n = len(x)
+    a=x[1] # set a to first array value
+    for i in range(0, len(x)):
+        if i > len(x)-2:
+            break
+        else:
+            b = x[i+1]
+            res=(a*b)//gcd([a,b])
+            a=res
+    return a
 
+# Test gcd
+# print(gcd([48, 18]))
+# print(gcd([18, 48]))
+# print(gcd([1, 2]))
+# print(gcd([2, 4]))
 
-for i in range(2, 20):
-    if isPrime(i):
-        primes.append(i)
-
-print(primes)
+# Test lcm
+#print(lcm([i for i in range(1, 1)]))
+# print(lcm([i for i in range(1, 5)]))
+# print(lcm([i for i in range(1, 7)]))
+# print(lcm([i for i in range(1, 21)]))
+# print(lcm([i for i in range(1, 1001)]))
