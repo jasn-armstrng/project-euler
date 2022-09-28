@@ -16,7 +16,7 @@ class TestThousandAndFirstPrime(unittest.TestCase):
 
     # Testing nthPrime function
     def test_nthPrime(self):
-        print("Testing the nthPrime function")
+        print("\nTesting the nthPrime function")
         result=thousandAndFirstPrime.nthPrime(6)
         self.assertEqual(result, 13)
 
