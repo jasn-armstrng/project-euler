@@ -15,7 +15,10 @@ def isPrime(x):
         return False
     return True
 
-
+# Takes approx. 6 second to run. It runs the isPrime function unneccessarily against
+# every odd number after 2. 
+# 1. How do I reduce the input into isPrime?
+# 2. Is there a better approach other than the general idea here. Maybe a call to an API of primes?
 def sumPrimesTo(n):
     sum=2
     for i in range (1,n,2):
