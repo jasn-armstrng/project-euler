@@ -4,15 +4,14 @@
 import math
 
 def largestProduct(K=int,number=int):
+    # Implements a sliding window solution
     strNum=str(number)
     window=[]
     maxProduct=0
 
     for i in range(len(strNum)):
         window.append(int(strNum[i]))
-
         if i>=K-1:
             maxProduct=max(maxProduct,math.prod(window))
             window.pop(0)
-
     return maxProduct
