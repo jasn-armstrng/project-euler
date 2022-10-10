@@ -28,6 +28,8 @@ def lcm(x=[1]):
             a=res
     return a
 
+# To do: Create a unit test for functions w/ below
+# ------------------------------------------------
 # Test gcd
 # print(gcd([48, 18]))
 # print(gcd([18, 48]))
