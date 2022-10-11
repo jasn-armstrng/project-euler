@@ -3,30 +3,41 @@
 # What is the largest prime factor of the number 600851475143 ?
 from math import sqrt, floor
 
-def isPrime(x:int)->bool:
-    # The range is based on the fact that a composite number must have a factor
-    # less than or equal to the square root of that number. Otherwise, the
-    # number is prime.
-    if x>1:
-        for i in range(2,floor(sqrt(x)+1)):
-            if x%i==0:
-                return False
-    else:
-        return False
-    return True
+def is_prime(x: int) -> bool:
+  """Returns True if prime else False
 
-def largestPrimeFactorOf(x:int)->int:
-    """ This is ugly """
-    # If no prime factor < x return x
-    largestPrimeFactor=x
-    # First run this hack assigning evens the even base prime factor - 2
-    if x%2==0:
-        largestPrimeFactor=2
-    # Then only check odd numbers as possible factors
-    divisor=1
-    while (divisor**2)<x:
-        divisor+=2
-        if x%divisor==0:
-            if isPrime(divisor):
-                largestPrimeFactor=divisor
-    return largestPrimeFactor
+  Approach:
+    The range is based on the fact that a composite number must have a factor
+    less than or equal to the square root of that number. Otherwise, the
+    number is prime.
+  """
+  if x > 1:
+    for i in range(2, floor(sqrt(x) + 1)):
+      if x % i == 0:
+        return False
+  else:
+    return False
+
+  return True
+
+def largest_prime_factor_of(x: int) -> int:
+  """Returns the largest prime factor
+
+  The below is ugly
+  1. If no prime factor < x return x
+  2. Run a hack assigning evens the even base prime factor - 2
+  3. Then only check odd numbers as possible factors
+  """
+  largest_prime_factor = x
+
+  if x % 2 == 0:
+    largest_prime_factor=2
+
+  divisor = 1
+  while (divisor ** 2) < x:
+    divisor += 2
+    if x % divisor == 0:
+      if is_prime(divisor):
+        largest_prime_factor = divisor
+
+  return largest_prime_factor
