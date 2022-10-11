@@ -1,9 +1,8 @@
 # Ques: Project Euler ques 8.
 # Given a positive number length n and positive number K find the maximum product of any contiguous subarray of size K.
-
 import math
 
-def largestProduct(K=int,number=int):
+def largestProduct(K:int,number:int)->int:
     # Implements a sliding window solution
     strNum=str(number)
     window=[]

@@ -3,7 +3,7 @@
 # What is the 10 001st prime number?
 from math import floor, sqrt
 
-def isPrime(x):
+def isPrime(x:int)->bool:
     # The range is based on the fact that a composite number must have a factor
     # less than or equal to the square root of that number. Otherwise, the
     # number is prime.
@@ -15,7 +15,7 @@ def isPrime(x):
         return False
     return True
 
-def nthPrime(n):
+def nthPrime(n:int)->int:
     num=1 # Number to check. Incremented in while loop
     primeCounter=0 # Tracks the number of primes found
     lastPrime=0 # The last prime found

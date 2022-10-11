@@ -7,13 +7,13 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 # find the sum of the even-valued terms.
 
-def evenFibsBelow(x):
-    last2Fibs = [1, 2]
-    sumOfEven = 0
-    while last2Fibs[-1] < x:
-        if last2Fibs[-1]%2 == 0:
-            sumOfEven += last2Fibs[-1]
-        last2Fibs = [last2Fibs[-1], sum(last2Fibs)]
+def evenFibsBelow(x:int)->int:
+    last2Fibs=[1, 2]
+    sumOfEven=0
+    while last2Fibs[-1]<x:
+        if last2Fibs[-1]%2==0:
+            sumOfEven+=last2Fibs[-1]
+        last2Fibs=[last2Fibs[-1],sum(last2Fibs)]
     return sumOfEven
 
 if __name__ == '__main__':
