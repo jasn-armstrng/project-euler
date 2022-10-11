@@ -15,8 +15,8 @@ def is_prime(x: int) -> bool:
     for i in range(2, floor(sqrt(x) + 1)):
       if x % i == 0:
         return False
-      else:
-        return False
+  else:
+    return False
 
   return True
 
