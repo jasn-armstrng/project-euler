@@ -3,8 +3,17 @@ import largestPrimeFactor
 
 class TestLargestPrimeFactor(unittest.TestCase):
     def test_largestPrimeFactorOf(self):
+        result=largestPrimeFactor.largestPrimeFactorOf(8)
+        self.assertEqual(result,2)
+
         result=largestPrimeFactor.largestPrimeFactorOf(12)
         self.assertEqual(result,3)
+
+        result=largestPrimeFactor.largestPrimeFactorOf(7)
+        self.assertEqual(result,7)
+
+        result=largestPrimeFactor.largestPrimeFactorOf(17)
+        self.assertEqual(result,17)
 
         result=largestPrimeFactor.largestPrimeFactorOf(28)
         self.assertEqual(result,7)

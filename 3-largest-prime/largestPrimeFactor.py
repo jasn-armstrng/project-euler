@@ -16,10 +16,17 @@ def isPrime(x:int)->bool:
     return True
 
 def largestPrimeFactorOf(x:int)->int:
-    largestPrimeFactor=0
+    """ This is ugly """
+    # If no prime factor < x return x
+    largestPrimeFactor=x
+    # First run this hack assigning evens the even base prime factor - 2
+    if x%2==0:
+        largestPrimeFactor=2
+    # Then only check odd numbers as possible factors
     divisor=1
     while (divisor**2)<x:
         divisor+=2
-        if x%divisor==0 and isPrime(divisor):
-            largestPrimeFactor=divisor
+        if x%divisor==0:
+            if isPrime(divisor):
+                largestPrimeFactor=divisor
     return largestPrimeFactor
