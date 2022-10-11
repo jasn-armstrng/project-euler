@@ -15,6 +15,3 @@ def evenFibsBelow(x:int)->int:
             sumOfEven+=last2Fibs[-1]
         last2Fibs=[last2Fibs[-1],sum(last2Fibs)]
     return sumOfEven
-
-if __name__ == '__main__':
-    print(evenFibsBelow(4000001))
