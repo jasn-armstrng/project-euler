@@ -5,7 +5,7 @@
 # from 1 to 20?
 
 # Compute gcd using Euclidean algorithm
-def gcd(x=[]):
+def gcd(x:list)->int:
     mod=x[1]
     while mod>0:
         gcd=x[1]
@@ -14,9 +14,8 @@ def gcd(x=[]):
     return gcd
 
 # Compute lcm using lcm(a,b)=(a*b)//gcd(a,b)
-def lcm(x=[1]):
+def lcm(x:list)->int:
     # len(x) should have at least 2
-
     n = len(x)
     a=x[1] # set a to first array value
     for i in range(0, len(x)):

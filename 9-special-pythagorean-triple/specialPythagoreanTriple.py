@@ -3,7 +3,7 @@
 # Find the product abc.
 from math import sqrt
 
-def loadSquares(K=int)->dict:
+def loadSquares(K:int)->dict:
     # Returns hash with integer key and its square as value
     hash={}
     for i in range(K+1):
@@ -11,7 +11,7 @@ def loadSquares(K=int)->dict:
     return hash
 
 # Brute force solution
-def pythagoreanTripleWithSum(K=int)->int:
+def pythagoreanTripleWithSum(K:int)->int:
     hash=loadSquares(K)
     for a in range(1,K):
         for b in range(a+1,K+1):
