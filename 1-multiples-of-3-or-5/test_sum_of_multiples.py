@@ -19,4 +19,4 @@ class TestSumOFMultiples(unittest.TestCase):
 if __name__ == "__main__":
   unittest.main()
 
-# Interesting pattern forming from multiples of 3, 5 and powers of 10
+# Interesting pattern forming from multiples of 3, 5 and powers of 10.
