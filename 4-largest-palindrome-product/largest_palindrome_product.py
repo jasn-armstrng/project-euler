@@ -6,7 +6,7 @@
 # Find the largest palindrome made from the product
 # of two 3-digit numbers
 
-def largest_palindrome(n: int):
+def largest_palindrome(n: int) -> int:
     '''Returns the largest palidrome made from any two n-digit integers.'''
     upper_bound = (10**n)-1
     lower_bound = (10**(n-1))-1
