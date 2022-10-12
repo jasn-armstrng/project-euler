@@ -17,7 +17,7 @@ def gcd(arr: list) -> int:
 
 
 def lcm(arr: list) -> int:
-    '''Returns lcm using lcm(a,b) = (a*b)//gcd(a,b).'''
+    '''Returns lcm using (a*b)//gcd(a,b), where a and b are elements of a sliding window through input array.'''
     # length of input array should be > 1
     n = len(arr) # len(x) should have at least 2
     lcm_ = arr[0] # set lcm_ to first array value
