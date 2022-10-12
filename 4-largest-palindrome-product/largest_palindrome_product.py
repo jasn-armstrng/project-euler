@@ -8,8 +8,8 @@
 
 def largest_palindrome(n: int):
     '''Returns the largest palidrome made from any two n-digit integers.'''
-    upper_bound = int(float(f'1e{n}')-1)
-    lower_bound = int(float(f'1e{n-1}')-1)
+    upper_bound = (10**n)-1
+    lower_bound = (10**(n-1))-1
     largest_ = 0
 
     for i in range(upper_bound, lower_bound, -1):
