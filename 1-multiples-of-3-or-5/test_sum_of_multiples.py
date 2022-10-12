@@ -16,7 +16,7 @@ class TestSumOFMultiples(unittest.TestCase):
     result = som.sum_of_multiples(3, 5, 10000)
     self.assertEqual(result, 23331668)
 
+    # Interesting pattern forming from multiples of 3, 5 and powers of 10.
+
 if __name__ == "__main__":
   unittest.main()
-
-# Interesting pattern forming from multiples of 3, 5 and powers of 10.
