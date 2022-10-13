@@ -16,6 +16,9 @@ class TestSumOFMultiples(unittest.TestCase):
 
         result = sum_multiples(3, 5, 10**4)
         self.assertEqual(result, 23331668)
+
+        # result = sum_multiples(3, 5, 10**9)
+        # self.assertEqual(result, 233333333166666668)
         # Interesting pattern forming from multiples of 3, 5 and powers of 10.
 
 
